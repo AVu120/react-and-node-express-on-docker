@@ -7,7 +7,7 @@
 - [Prerequisites to Getting Started](#prerequisites-to-getting-started)
 - [Getting Started](#getting-started)
 - [Accessing the Application](#accessing-the-application)
-- [Troubleshooting](#troubleshooting)
+- [Troubleshooting Errors](#troubleshooting-errors)
 
 ## About
 
@@ -72,9 +72,9 @@ to restart all the containers (with the new/updated packages).
 
 1. Enter localhost:3000 into any web-browser.
 
-## Troubleshooting
+## Troubleshooting Errors
 
-### No such file or directory error:
+### No such file or directory:
 
 - After running `docker-compose up`, if you see anything like the below error messages:
 
@@ -90,4 +90,19 @@ Error: Cannot find module '/usr/src/app/package.json'
 - Click 'Apply & Restart' button.
 - Re-select the previously unselected local drive.
 - Click 'Apply & Restart' button.
+- Run `docker-compose up` and the error shouldn't occur now.
+
+### Cannot start service (service-name): OCI runtime create failed:
+
+- After running `docker-compose up`, if you see anything like the below error messages:
+
+```
+Cannot start service (service-name): OCI runtime create failed
+container_linux.go:349: starting container process caused "process_linux.go:449:
+container init caused \"rootfs_linux.go:58: mounting \\\"/var/lib/docker/volumes/511d40c5336f7bcc0df59a8b562e534cfc047b6a3758ab5806fcd49b0028dff7/_data\\\" to rootfs \\\"/var/lib/docker/overlay2/672bcfc131bf96adf217692345bbe603dfb830e84bbcf4158ecf04002baa27da/merged\\\" at \\\"/var/lib/docker/overlay2/672bcfc131bf96adf217692345bbe603dfb830e84bbcf4158ecf04002baa27da/merged/usr/src/app/node_modules\\\" caused \\\"mkdir /var/lib/docker/overlay2/672bcfc131bf96adf217692345bbe603dfb830e84bbcf4158ecf04002baa27da/merged/usr/src/app/node_modules: file exists\\\"\"": unknown
+
+ERROR: Encountered errors while bringing up the project.
+```
+
+- Restart Docker Desktop.
 - Run `docker-compose up` and the error shouldn't occur now.
