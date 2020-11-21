@@ -1,0 +1,5 @@
+# ignore all contents of /node_modules
+/node_modules/**
+# don't ignore the folder and node_modules/.gitkeep
+!/node_modules
+!/node_modules/.gitkeep
