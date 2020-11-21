@@ -11,7 +11,7 @@
 
 ## About
 
-A template for setting up a React frontend and a Node-Express backend in docker containers using a single command.
+A template for setting up a React frontend and a Node-Express backend in docker containers (that talk to each other) using a single command.
 
 ## Built With
 
