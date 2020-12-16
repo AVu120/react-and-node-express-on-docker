@@ -47,14 +47,14 @@ docker-compose up
 - Client is running on port 3000.
 - Server is running/listening on port 5000.
 
-4. When necessary, install only the client dependencies you need (e.g. install react-scripts to execute 'npm run build' before deploying app to production).
+4. When necessary, install only the client dependencies you need (e.g. install react-scripts to execute 'npm run build' before deploying app to production). Note that local node_modules will not be copied into the container.
 
 ```
 cd client
 npm i react-scripts etc.
 ```
 
-5. When you need to add-new/update npm packages to/in an image/container, update the relevant package.json, stop that container first, then run
+5. When you need to add-new/update npm packages to/in an image/container, update the relevant package.json, stop that container, then run
 
 ```
 docker-compose build <service-name>
